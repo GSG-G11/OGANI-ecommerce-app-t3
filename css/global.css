@@ -10,9 +10,83 @@
 	padding-inline: 15px;
 }
 
+/* ******************* Landing Page Styles    **************** */
+
+.login-logo {
+	font-size: 60px;
+	text-align: center;
+	margin-bottom: 20px;
+	text-shadow: 2px 2px #bbaeae;
+}
+
+.login-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+}
+
+.login-options {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	/* justify-content: center;
+ */
+	align-items: center;
+}
+
+.option {
+	width: 160px;
+	height: 50px;
+	padding: 10px;
+	margin: 20px;
+	border-radius: 5%;
+	text-align: center;
+	border: none;
+	background-color: #8caed6;
+}
+
+.option a {
+	color: black;
+	text-decoration: none;
+}
+
 @media (min-width: 567px) {
 	.container {
 		width: 550px;
+	}
+	/* ******************* Landing Page Styles    **************** */
+	.login-logo {
+		font-size: 60px;
+		text-align: center;
+		margin-bottom: 20px;
+		text-shadow: 2px 2px #bbaeae;
+	}
+	.login-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100vh;
+	}
+	.login-options {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.option {
+		width: 160px;
+		height: 50px;
+		padding: 10px;
+		margin: 20px;
+		border-radius: 5%;
+		text-align: center;
+		border: none;
+		background-color: #8caed6;
+	}
+	.option a {
+		color: black;
+		text-decoration: none;
 	}
 }
 
@@ -20,11 +94,77 @@
 	.container {
 		width: 750px;
 	}
+	/* ******************* Landing Page Styles    **************** */
+	.login-logo {
+		font-size: 60px;
+		text-align: center;
+		margin-bottom: 20px;
+		text-shadow: 2px 2px #bbaeae;
+	}
+	.login-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100vh;
+	}
+	.login-options {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.option {
+		width: 160px;
+		height: 50px;
+		padding: 10px;
+		margin: 20px;
+		border-radius: 5%;
+		text-align: center;
+		border: none;
+		background-color: #8caed6;
+	}
+	.option a {
+		color: black;
+		text-decoration: none;
+	}
 }
 
 @media (min-width: 992px) {
 	.container {
 		width: 950px;
+	}
+	/* ******************* Landing Page Styles    **************** */
+	.login-logo {
+		font-size: 60px;
+		text-align: center;
+		margin-bottom: 20px;
+		text-shadow: 2px 2px #bbaeae;
+	}
+	.login-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100vh;
+	}
+	.login-options {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.option {
+		width: 160px;
+		height: 50px;
+		padding: 10px;
+		margin: 20px;
+		border-radius: 5%;
+		text-align: center;
+		border: none;
+		background-color: #8caed6;
+	}
+	.option a {
+		color: black;
+		text-decoration: none;
 	}
 }
 
@@ -301,3 +441,36 @@ header .container nav ul.active {
 	object-fit: cover;
 }
 /* end products */
+/* ******************* Landing Page Styles    **************** */
+.login-logo {
+	font-size: 60px;
+	text-align: center;
+	margin-bottom: 20px;
+	text-shadow: 2px 2px #bbaeae;
+}
+.login-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+}
+.login-options {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.option {
+	width: 160px;
+	height: 50px;
+	padding: 10px;
+	margin: 20px;
+	border-radius: 5%;
+	text-align: center;
+	border: none;
+	background-color: #8caed6;
+}
+.option a {
+	color: black;
+	text-decoration: none;
+}
