@@ -436,8 +436,8 @@ header .container nav ul.active {
 }
 
 .products-items.list img {
-	width: 250px;
-	height: 100px;
+	min-width: 170px;
+	height: 120px;
 	object-fit: cover;
 }
 /* end products */
