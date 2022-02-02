@@ -10,6 +10,94 @@
     padding-inline: 15px;
 }
 
+/*cart items*/
+
+.cart-page {
+	margin: 90px auto;
+	padding: 180px;
+}
+
+.table-cart-items{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.cart-info{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cart-info p{
+    padding: 20px ;
+}
+
+.cart-info small{
+    padding: 20px;
+}
+
+.cart-info a{
+    padding: 20px ;
+}
+
+.cart-table-head{
+	text-align: left;
+	padding: 5px;
+	color: #fff;
+	background: #97c251;
+}
+
+
+.cart-table-body{
+	padding: 10px 5px;
+    justify-items: center;
+}
+
+
+.quantity {
+	width: 40px;
+	height: 30px;
+	padding: 5px;
+}
+
+.delete-cart-item {
+	color: #97c251;
+	font-size: 12px;
+}
+
+.cart-item-img {
+	width: 150px;
+	height: 150px;
+	margin-right: 10px;
+}
+
+
+.total-price {
+	margin-bottom: 10px;
+	border-bottom: 3px solid #97c251;
+	width: 100%;
+	max-width: 400px;
+	display: flex;
+	justify-content: right;
+}
+
+.total-price-place{
+	background-color: #97c251;
+	color: #fff;
+	width: 150px;
+	height: 50px;
+	margin-bottom: 10px;
+	border-radius: 10%;
+	align-items: right;
+}
+
+.total-price-amount{
+	width: 150px;
+	height: 50px;
+	border-radius: 10%;
+	align-items: flex-end;
+}
+
+
 
 /* ******************* Landing Page Styles    **************** */
 
@@ -383,6 +471,10 @@ header .container nav ul.active {
 }
 
 @media (max-width: 567px) {
+    .cart-page {
+        margin: 90px auto;
+       width: 100%;
+    }
     .products .filter {
         flex-direction: column;
         align-items: flex-start;
