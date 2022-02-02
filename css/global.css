@@ -474,3 +474,8 @@ header .container nav ul.active {
 	color: black;
 	text-decoration: none;
 }
+
+.not-found-message {
+	text-align: center;
+	font-size: 1.5rem;
+}
