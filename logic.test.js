@@ -1,4 +1,4 @@
-const { searchProduct, filterProduct } = require("./js/logic");
+const { searchProduct, filterProduct, editProduct } = require("./js/logic");
 
 describe("Test buyer page", () => {
     test("Should return items when searching for it", () => {
@@ -92,9 +92,54 @@ describe("Test buyer page", () => {
                 image: "../assets/images/pineapple.jpeg",
             },
         ]);
-        const expected = [
-            { id: 1, category: 'food', price: 100, productName: 'Hamburger', image: '../assets/images/hamburger.jpeg' },
-            { id: 5, category: 'food', price: 130, productName: 'Steak', image: '../assets/images/steak.jpeg' }
+        const expected = [{
+                id: 1,
+                category: "food",
+                price: 100,
+                productName: "Hamburger",
+                image: "../assets/images/hamburger.jpeg",
+            },
+            {
+                id: 5,
+                category: "food",
+                price: 130,
+                productName: "Steak",
+                image: "../assets/images/steak.jpeg",
+            },
+        ];
+        expect(actual).toEqual(expected);
+    });
+
+    test("Should Edit Item value", () => {
+        const actual = editProduct("1", "price", 50.0, [{
+                id: 0,
+                category: "electronics",
+                price: 30.0,
+                productName: "HP Laptop",
+                image: "../assets/images/laptop.jpg",
+            },
+            {
+                id: 1,
+                category: "food",
+                price: 100.0,
+                productName: "Hamburger",
+                image: "../assets/images/hamburger.jpeg",
+            },
+        ]);
+        const expected = [{
+                id: 0,
+                category: "electronics",
+                price: 30.0,
+                productName: "HP Laptop",
+                image: "../assets/images/laptop.jpg",
+            },
+            {
+                id: 1,
+                category: "food",
+                price: 50.0,
+                productName: "Hamburger",
+                image: "../assets/images/hamburger.jpeg",
+            },
         ];
         expect(actual).toEqual(expected);
     });
