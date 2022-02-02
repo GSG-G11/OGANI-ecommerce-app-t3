@@ -6,6 +6,9 @@ const listViewBtn = document.querySelector(".list-view");
 const productsWrapper = document.querySelector(".products-items");
 const searchForm = document.querySelector(".welcome form");
 const searchField = document.querySelector(".input-wrapper input[type='text']");
+const categoryFilter = document.querySelector("#category");
+const priceFilter = document.querySelector("#price");
+
 
 hamburgerMenu.onclick = () => menu.classList.toggle("active");
 
@@ -88,3 +91,12 @@ searchForm.onsubmit = (e) => {
         }
     }
 };
+
+
+const getSelectedOption = () => { // Get Selected items from dropbox
+    productsWrapper.innerHTML = "";
+    renderProducts(filterProduct(categoryFilter.value, priceFilter.value, availableProducts));
+
+}
+categoryFilter.onchange = getSelectedOption;
+priceFilter.onchange = getSelectedOption;
