@@ -464,8 +464,8 @@ header .container nav ul.active {
 }
 
 .products-items.list img {
-    width: 250px;
-    height: 100px;
+    min-width: 170px;
+    height: 120px;
     object-fit: cover;
 }
 
@@ -543,4 +543,9 @@ footer ul li {
 
 .sections-pad {
     margin-top: 15px;
+}
+
+.not-found-message {
+    text-align: center;
+    font-size: 1.5rem;
 }
