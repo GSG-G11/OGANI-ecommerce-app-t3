@@ -1,4 +1,4 @@
-const { searchProduct, filterProduct, editProduct } = require("./js/logic");
+const { searchProduct, filterProduct, editProduct, deleteProduct } = require("./js/logic");
 
 describe("Test buyer page", () => {
     test("Should return items when searching for it", () => {
@@ -141,6 +141,32 @@ describe("Test buyer page", () => {
                 image: "../assets/images/hamburger.jpeg",
             },
         ];
+        expect(actual).toEqual(expected);
+    });
+
+    test("Should Delete Product", () => {
+        const actual = deleteProduct("1", [{
+                id: 0,
+                category: "electronics",
+                price: 30.0,
+                productName: "HP Laptop",
+                image: "../assets/images/laptop.jpg",
+            },
+            {
+                id: 1,
+                category: "food",
+                price: 100.0,
+                productName: "Hamburger",
+                image: "../assets/images/hamburger.jpeg",
+            },
+        ]);
+        const expected = [{
+            id: 0,
+            category: "electronics",
+            price: 30.0,
+            productName: "HP Laptop",
+            image: "../assets/images/laptop.jpg",
+        }, ];
         expect(actual).toEqual(expected);
     });
 });
