@@ -1,11 +1,20 @@
 // Edit Product --Seller
 function editProduct(id, property, replaceValue, modifiedProducts) {
-    modifiedProducts.map(element => {
-        if (element['id'] == id) {
+    modifiedProducts.map((element) => {
+        if (element["id"] == id) {
             element[property] = replaceValue;
         }
     });
     return modifiedProducts;
+}
+
+function deleteProduct(id, products) {
+    products.filter((element, index) => {
+        if (element["id"] == id) {
+            products.splice(index, 1); // Get item index and Delete 1 item
+        }
+    });
+    return products;
 }
 
 function searchProduct(product, products) {
@@ -25,5 +34,6 @@ function filterProduct(category = "", price = "", products) {
 module.exports = {
     searchProduct,
     filterProduct,
-    editProduct
+    editProduct,
+    deleteProduct
 };
