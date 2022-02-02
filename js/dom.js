@@ -92,6 +92,89 @@ searchForm.onsubmit = (e) => {
     }
 };
 
+// Add to cart
+
+const carts = document.querySelectorAll('.add-to-cart');
+
+for (let i=0; i < carts.length; i++) {
+	carts[i].addEventListener('click', () => {
+		cartNumbers(availableProducts[i]);
+        totalPrice(availableProducts[i]);
+	})
+}
+
+function onLoudCartNumbers() {
+    
+    let productNumbers = localStorage.getItem('cartNumbers'); 
+
+    if (productNumbers) {
+        document.querySelector('.cart-icon span').textContent = productNumbers;
+    }
+}
+
+function cartNumbers(product) {
+    let productNumbers = localStorage.getItem('cartNumbers');
+
+    productNumbers = parseInt(productNumbers);
+
+    if(productNumbers) {
+        localStorage.setItem('cartNumbers', productNumbers + 1);
+        document.querySelector('.cart-icon span').textContent = productNumbers + 1;
+    }else{
+        localStorage.setItem('cartNumbers', 1);
+        document.querySelector('.cart-icon span').textContent = 1;
+    }
+    setItems(product);
+    
+}
+
+function setItems(product) {
+    let cartItems = localStorage.getItem('productInCart');
+    cartItems = JSON.parse(cartItems);
+
+    if (cartItems != null) {
+
+        if(cartItems[product.productName] == undefined) {
+            cartItems= {
+                ...cartItems,
+                [product.productName]: product
+            }
+        }
+        cartItems[product.productName].inCart += 1;
+    } else {
+        product.inCart = 1;
+        cartItems = {
+            [product.productName]: product
+        }
+    }
+
+    product.inCart = 1;
+     cartItems = {
+        [product.productName]: product
+    }
+    
+    localStorage.setItem("productInCart", JSON.stringify(cartItems));
+}
+
+function totalPrice(product) {
+    console.log("this", product.productName);
+    let cartPrice = localStorage.getItem('total');
+    
+
+    if(cartPrice != null) {
+        cartPrice = parseInt(cartPrice);
+        localStorage.setItem("total", cartPrice + product.price);
+    }else {
+        localStorage.setItem("total", product.price);
+    }
+    localStorage.setItem("total", product.price);
+}
+
+
+onLoudCartNumbers();
+
+
+
 
 const getSelectedOption = () => { // Get Selected items from dropbox
     productsWrapper.innerHTML = "";
