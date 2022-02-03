@@ -26,9 +26,11 @@ const filterProduct = (category = "", price = "", products) => {
 	return newProducts.filter((item) => item["category"] === category); // Sort category
 };
 
-module.exports = {
-	searchProduct,
-	filterProduct,
-	editProduct,
-	deleteProduct,
-};
+if (typeof module !== "undefined") {
+	module.exports = {
+		searchProduct,
+		filterProduct,
+		editProduct,
+		deleteProduct,
+	};
+}
