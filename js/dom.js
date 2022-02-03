@@ -106,15 +106,15 @@ for (let i = 0; i < carts.length; i++) {
 	});
 }
 
-function onLoudCartNumbers() {
+const onLoudCartNumbers = () => {
 	let productNumbers = localStorage.getItem("cartNumbers");
 
 	if (productNumbers) {
 		document.querySelector(".cart-icon span").textContent = productNumbers;
 	}
-}
+};
 
-function cartNumbers(product) {
+const cartNumbers = (product) => {
 	let productNumbers = localStorage.getItem("cartNumbers");
 
 	productNumbers = parseInt(productNumbers);
@@ -127,9 +127,9 @@ function cartNumbers(product) {
 		document.querySelector(".cart-icon span").textContent = 1;
 	}
 	setItems(product);
-}
+};
 
-function setItems(product) {
+const setItems = (product) => {
 	let cartItems = localStorage.getItem("productInCart");
 	cartItems = JSON.parse(cartItems);
 
@@ -154,9 +154,9 @@ function setItems(product) {
 	};
 
 	localStorage.setItem("productInCart", JSON.stringify(cartItems));
-}
+};
 
-function totalPrice(product) {
+const totalPrice = (product) => {
 	console.log("this", product.productName);
 	let cartPrice = localStorage.getItem("total");
 
@@ -167,7 +167,7 @@ function totalPrice(product) {
 		localStorage.setItem("total", product.price);
 	}
 	localStorage.setItem("total", product.price);
-}
+};
 
 onLoudCartNumbers();
 
